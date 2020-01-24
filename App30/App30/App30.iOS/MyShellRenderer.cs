@@ -67,7 +67,14 @@ namespace App30.iOS
 
         public void UpdateLayout(UITabBarController controller)
         {
+            
+            UITabBar myTabBar = controller.TabBar;
 
+            foreach (var barItem in myTabBar.Items)
+            {
+                barItem.ImageInsets = new UIEdgeInsets(8, 0, 0, 0);
+                //barItem.TitlePositionAdjustment = new UIOffset(10, 0);
+            }
         }
     }
 }
